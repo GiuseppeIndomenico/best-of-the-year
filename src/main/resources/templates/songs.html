@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Songs</title>
+</head>
+<body>
+    <h1>Best Songs</h1>
+        <a th:href="'/songs/' + ${bestSongs[0].id}">
+        <p th:text="${bestSongs[0].titolo}"></p>
+    </a>
+            <a th:href="'/songs/' + ${bestSongs[1].id}">
+        <p th:text="${bestSongs[1].titolo}"></p>
+    </a>
+            <a th:href="'/songs/' + ${bestSongs[2].id}">
+        <p th:text="${bestSongs[2].titolo}"></p>
+    </a>
+
+</body>
+</html>

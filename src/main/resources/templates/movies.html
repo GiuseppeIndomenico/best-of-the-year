@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Best Movies</title>
+</head>
+<body>
+    <h1>Best Movies</h1>
+    <a th:href="'/movies/' + ${bestMovies[0].id}">
+        <p th:text="${bestMovies[0].titolo}"></p>
+    </a>
+    <a th:href="'/movies/' + ${bestMovies[1].id}">
+        <p th:text="${bestMovies[1].titolo}"></p>
+    </a>
+    <a th:href="'/movies/' + ${bestMovies[2].id}">
+        <p th:text="${bestMovies[2].titolo}"></p>
+    </a>
+</body>
+</html>
