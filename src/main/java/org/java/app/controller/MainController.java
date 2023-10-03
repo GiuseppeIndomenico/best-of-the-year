@@ -43,11 +43,15 @@ public class MainController {
 		for (Movie movie : movies) {
 			if (movie.getId() == id) {
 				model.addAttribute("movie", movie);
-				return "movie_detail"; 
+
+				String titoloConTrattini = movie.getTitolo().replace(" ", "-");
+				model.addAttribute("titoloConTrattini", titoloConTrattini);
+
+				return "movie_detail";
 			}
 		}
 
-		return "film_not_found"; 
+		return "film_not_found";
 	}
 
 	@GetMapping("/songs/{id}")
@@ -57,11 +61,15 @@ public class MainController {
 		for (Song song : songs) {
 			if (song.getId() == id) {
 				model.addAttribute("song", song);
-				return "song_detail"; 
+				
+				String titoloConTrattini = song.getTitolo().replace(" ", "-");
+				model.addAttribute("titoloConTrattini", titoloConTrattini);
+				
+				return "song_detail";
 			}
 		}
 
-		return "song_not_found"; 
+		return "song_not_found";
 	}
 
 	@GetMapping("/songs")

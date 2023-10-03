@@ -7,7 +7,8 @@ a {
 	transition: all .25s;
 }
 
-h2 a:hover, .btn:hover {
+h2 a:hover,
+.btn:hover {
 	filter: invert(1)
 }
 
@@ -19,6 +20,10 @@ h2 a:hover, .btn:hover {
 	transition: all .25s;
 }
 
-.card-body{
+.card-body {
 	min-height: 50vh;
+}
+
+img{
+	max-width: 800px;
 }
