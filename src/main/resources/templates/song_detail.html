@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 
 <head>
 	<meta charset="ISO-8859-1">
 	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}" />
 	<link rel="stylesheet" th:href="@{/css/style.css}">
-	<title>Best Movies</title>
+	<title th:text="${song.titolo}"></title>
 </head>
-
-
-
 
 <body class="bg-dark text-white">
 
@@ -24,24 +21,24 @@
 
 			<div class="border-end col-4">
 				<h2 class="text-center">
-					<a class="text-warning"  href="http://localhost:8080/movies">Film</a>
+					<a class="text-warning" href="http://localhost:8080/movies">Film</a>
 				</h2>
 			</div>
 
 			<div class="col-4">
 				<h2 class="text-center">
-					<a class="text-warning"  href="http://localhost:8080/songs">Canzoni</a>
+					<a class="text-warning" href="http://localhost:8080/songs">Canzoni</a>
 				</h2>
 			</div>
 		</div>
 
 		<div class="card-body d-flex flex-column align-items-center justify-content-center">
-			<h1 class="display-3 fw-bold mb-3">Best Movies</h1>
-			<a th:href="'/movies/' + ${movie.id}" class="btn btn-danger"  th:each="movie : ${bestMovies}">
-				<div>
-					<p th:text="${movie.titolo}"></p>
-				</div>
-			</a>
+				<h1 class="display-2 fw-bold" th:text="${song.titolo}"></h1>
+
+
+	
+
+
 		</div>
 
 
